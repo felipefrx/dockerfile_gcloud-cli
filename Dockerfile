@@ -1,0 +1,27 @@
+FROM alpine:3.15.4
+
+RUN apk add --update python3 py3-pip \
+    ansible \
+    py3-google-auth \
+    py3-jsonpatch \
+    py3-yaml \
+    py3-jsonpatch \
+    curl
+    
+RUN ansible-galaxy collection install google.cloud \
+    kubernetes.core \
+    community.kubernetes \
+    cloud.common
+
+RUN pip install kubernetes
+
+# Downloading gcloud package
+RUN curl https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz > /tmp/google-cloud-sdk.tar.gz
+
+# Installing the package
+RUN mkdir -p /usr/local/gcloud \
+  && tar -C /usr/local/gcloud -xvf /tmp/google-cloud-sdk.tar.gz \
+  && /usr/local/gcloud/google-cloud-sdk/install.sh
+
+# Adding the package path to local
+ENV PATH $PATH:/usr/local/gcloud/google-cloud-sdk/bin
