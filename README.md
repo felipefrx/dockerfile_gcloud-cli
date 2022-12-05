@@ -9,7 +9,8 @@ cd ./dockerfile/
 docker build -t gcloud-cli:0.0.1 -f Dockerfile.gcloud-cli .
 ```
 
-*if you want to reduce image size then install docker-slim*
+
+**if you want to reduce image size then install docker-slim**
 ```
 curl -L -o ds.tar.gz https://downloads.dockerslim.com/releases/1.39.1/dist_linux.tar.gz
 ```
