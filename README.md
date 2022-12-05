@@ -6,5 +6,5 @@ Dockerfile with gcloud cli and ansible to upload a gke cluster.
 cd ./dockerfile/
 ```
 ```
-docker build -f Dockerfile.gcloud-cli .
+docker build -t gcloud-cli:0.0.1 -f Dockerfile.gcloud-cli .
 ```
