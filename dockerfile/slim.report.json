@@ -1,0 +1,213 @@
+{
+  "version": "1.0",
+  "engine": "linux|Transformer|1.39.1|537c77323f2e9a3d6771aa0ea73a047017774d16|2022-11-13_03:27:40AM",
+  "containerized": false,
+  "host_distro": {
+    "name": "Ubuntu",
+    "version": "22.04",
+    "display_name": "Ubuntu 22.04.1 LTS"
+  },
+  "type": "build",
+  "state": "done",
+  "target_reference": "gcloud-cli:0.0.1",
+  "system": {
+    "type": "",
+    "release": "",
+    "distro": {
+      "name": "",
+      "version": "",
+      "display_name": ""
+    }
+  },
+  "source_image": {
+    "identity": {
+      "id": "sha256:0cf3ed8f6a10e8342ea31157963a415ebbb5833320db3a1c496fc2cacc993aed",
+      "tags": [
+        "0.0.1",
+        "latest"
+      ],
+      "names": [
+        "gcloud-cli:0.0.1",
+        "gcloud-cli:latest"
+      ]
+    },
+    "size": 1662038448,
+    "size_human": "1.7 GB",
+    "create_time": "2022-12-05T00:02:29Z",
+    "docker_version": "20.10.21",
+    "architecture": "amd64",
+    "os": "linux",
+    "env_vars": [
+      "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/gcloud/google-cloud-sdk/bin"
+    ],
+    "container_entry": {
+      "exe_path": ""
+    }
+  },
+  "minified_image_size": 1876953,
+  "minified_image_size_human": "1.9 MB",
+  "minified_image": "gcloud-cli.slim",
+  "minified_image_has_data": true,
+  "minified_by": 885.4981707053932,
+  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/0cf3ed8f6a10e8342ea31157963a415ebbb5833320db3a1c496fc2cacc993aed/artifacts",
+  "container_report_name": "creport.json",
+  "seccomp_profile_name": "gcloud-cli-seccomp.json",
+  "apparmor_profile_name": "gcloud-cli-apparmor-profile",
+  "image_stack": [
+    {
+      "is_top_image": false,
+      "id": "sha256:0ac33e5f5afa79e084075e8698a22d574816eea8d7b7d480586835657c3e1c8b",
+      "full_name": "alpine:3.15.4",
+      "repo_name": "alpine",
+      "version_tag": "3.15.4",
+      "raw_tags": [
+        "alpine:3.15.4"
+      ],
+      "create_time": "2022-04-05T00:19:59Z",
+      "new_size": 5574964,
+      "new_size_human": "5.6 MB",
+      "instructions": [
+        {
+          "type": "ADD",
+          "time": "2022-04-05T00:19:59Z",
+          "is_nop": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 5574964,
+          "size_human": "5.6 MB",
+          "params": "file:5d673d25da3a14ce1f6cf66e4c7fd4f4b85a3759a9d93efb3fd9ff852b5b56e4 in /",
+          "command_snippet": "ADD file:5d673d25da3a14ce1f6cf66e4c7fd4f4b85...",
+          "command_all": "ADD file:5d673d25da3a14ce1f6cf66e4c7fd4f4b85a3759a9d93efb3fd9ff852b5b56e4 /",
+          "target": "/",
+          "source_type": "file"
+        },
+        {
+          "type": "CMD",
+          "time": "2022-04-05T00:19:59Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "is_exec_form": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "[\"/bin/sh\"]\n",
+          "command_snippet": "CMD [\"/bin/sh\"]\n",
+          "command_all": "CMD [\"/bin/sh\"]\n",
+          "raw_tags": [
+            "alpine:3.15.4"
+          ]
+        }
+      ]
+    },
+    {
+      "is_top_image": true,
+      "id": "sha256:0cf3ed8f6a10e8342ea31157963a415ebbb5833320db3a1c496fc2cacc993aed",
+      "full_name": "gcloud-cli:0.0.1",
+      "repo_name": "gcloud-cli",
+      "version_tag": "0.0.1",
+      "raw_tags": [
+        "gcloud-cli:0.0.1",
+        "gcloud-cli:latest"
+      ],
+      "create_time": "2022-12-05T00:02:29Z",
+      "new_size": 1656463484,
+      "new_size_human": "1.7 GB",
+      "base_image_id": "sha256:0ac33e5f5afa79e084075e8698a22d574816eea8d7b7d480586835657c3e1c8b",
+      "instructions": [
+        {
+          "type": "RUN",
+          "time": "2022-12-04T23:59:04Z",
+          "is_nop": false,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:4a5f01e65b14c1d4c0e49f13de08ecb3786b6df4638419deabcde5d94eead3c2",
+          "layer_index": 0,
+          "size": 433967877,
+          "size_human": "434 MB",
+          "command_snippet": "RUN apk add curl     --no-cache curl     --u...",
+          "command_all": "RUN apk add curl     --no-cache curl     --update python3 py3-pip     ansible     py3-google-auth     py3-jsonpatch     py3-yaml     py3-jsonpatch     curl",
+          "system_commands": [
+            "apk add curl     --no-cache curl     --update python3 py3-pip     ansible     py3-google-auth     py3-jsonpatch     py3-yaml     py3-jsonpatch     curl"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2022-12-04T23:59:39Z",
+          "is_nop": false,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:7e7c7c9842a370b5a22ceff56d9c7157f0a98b8cf14f0d12ecfcdaf74d81bd38",
+          "layer_index": 0,
+          "size": 7260443,
+          "size_human": "7.3 MB",
+          "command_snippet": "RUN ansible-galaxy collection install google...",
+          "command_all": "RUN ansible-galaxy collection install google.cloud     kubernetes.core     community.kubernetes     cloud.common",
+          "system_commands": [
+            "ansible-galaxy collection install google.cloud     kubernetes.core     community.kubernetes     cloud.common"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2022-12-04T23:59:49Z",
+          "is_nop": false,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:2cf82c52d0993d142205b60253b4424075c2a7b152ed56e3a0bbd86df4bd403b",
+          "layer_index": 0,
+          "size": 24772580,
+          "size_human": "25 MB",
+          "command_snippet": "RUN pip install kubernetes",
+          "command_all": "RUN pip install kubernetes",
+          "system_commands": [
+            "pip install kubernetes"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2022-12-04T23:59:57Z",
+          "is_nop": false,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:2af651f2677dd65c7410d80bea72b61f3897745b00168fd0e4a817118537b915",
+          "layer_index": 0,
+          "size": 38423650,
+          "size_human": "38 MB",
+          "command_snippet": "RUN curl https://dl.google.com/dl/cloudsdk/r...",
+          "command_all": "RUN curl https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz > /tmp/google-cloud-sdk.tar.gz",
+          "system_commands": [
+            "curl https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz > /tmp/google-cloud-sdk.tar.gz"
+          ]
+        },
+        {
+          "type": "RUN",
+          "time": "2022-12-05T00:02:19Z",
+          "is_nop": false,
+          "local_image_exists": true,
+          "intermediate_image_id": "sha256:31bd7df3a78980dda6e7f901176d5b4d6a57e655218065b638caf45d0be06aa6",
+          "layer_index": 0,
+          "size": 1152038934,
+          "size_human": "1.2 GB",
+          "command_snippet": "RUN mkdir -p /usr/local/gcloud && \\\n\ttar -C ...",
+          "command_all": "RUN mkdir -p /usr/local/gcloud && \\\n\ttar -C /usr/local/gcloud -xvf /tmp/google-cloud-sdk.tar.gz && \\\n\t/usr/local/gcloud/google-cloud-sdk/install.sh",
+          "system_commands": [
+            "mkdir -p /usr/local/gcloud",
+            "tar -C /usr/local/gcloud -xvf /tmp/google-cloud-sdk.tar.gz",
+            "/usr/local/gcloud/google-cloud-sdk/install.sh"
+          ]
+        },
+        {
+          "type": "ENV",
+          "time": "2022-12-05T00:02:29Z",
+          "is_last_instruction": true,
+          "is_nop": true,
+          "local_image_exists": true,
+          "layer_index": 0,
+          "size": 0,
+          "params": "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/gcloud/google-cloud-sdk/bin",
+          "command_snippet": "ENV PATH=/usr/local/sbin:/usr/local/bin:/usr...",
+          "command_all": "ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/gcloud/google-cloud-sdk/bin",
+          "raw_tags": [
+            "gcloud-cli:0.0.1",
+            "gcloud-cli:latest"
+          ]
+        }
+      ]
+    }
+  ]
+}
