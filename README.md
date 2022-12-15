@@ -1,4 +1,4 @@
-# dockerfile-gcloud-cli
+# Dockerfile gcloud-cli
 Dockerfile with gcloud cli and ansible to upload a gke cluster.
 
 ### Build image
